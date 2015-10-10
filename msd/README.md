@@ -1,6 +1,6 @@
 # mass spring damper
 
-[following this](http://www.roboticslab.ca/mass-spring-damper/)
+[following this example](http://www.roboticslab.ca/mass-spring-damper/)
 
 ![msd](msd.png)
 
@@ -30,17 +30,17 @@ x2. = - c/mx2 + - k/mx1 + u/m
 
 in matrix form:
 
-| x1. | = | 0        1 |  | x1 |  + | 0   | u
-| x2. |   | -k/m  -c/m |  | x2 |    | 1/m |
-                A                      B
+    | x1. | = | 0        1 |  | x1 |  + | 0   | u
+    | x2. |   | -k/m  -c/m |  | x2 |    | 1/m |
+                    A                      B
 
 output equation (want to know position of mass)
 
 y = x(t) = x1(t)
  
-y = | 1 0 | | x1 |  + 0 u
-            | x2 |
-       C              D
+    y = | 1 0 | | x1 |  + 0 u
+                | x2 |
+           C              D
 
 Then using a [python control library](http://python-control.sourceforge.net/manual/timeresp.html?highlight=step)
 
